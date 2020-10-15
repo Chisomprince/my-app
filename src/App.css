@@ -1,0 +1,89 @@
+.App {
+  background-color: rgb(238, 238, 238);
+}
+.container {
+  text-align: center;
+}
+
+.intro {
+  margin-top: 50px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(36, 36, 63, 0.568), rgba(24, 37, 24, 0.555)),
+    url(./images/clement-h-95YRwf6CNw8-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.intro2 {
+  margin-top: 50px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgb(12, 12, 24), rgb(24, 37, 24));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.colored {
+  color: rgb(43, 54, 117);
+}
+
+.about {
+  padding-top: 150px;
+
+  margin-top: 20px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(12, 12, 24), rgb(24, 37, 24))
+    /* url(./component/images/bitcoingirl.jpg) */;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+*/ .eduDate {
+  margin-left: 20px;
+  color: rgb(43, 54, 117);
+}
+
+.image {
+  border: 0px solid gray;
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.footer {
+  margin-top: 5px;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgb(12, 12, 24), rgb(24, 37, 24));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    margin: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 20px;
+  }
+}
+.main {
+  margin-top: 50px;
+}
