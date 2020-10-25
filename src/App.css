@@ -63,6 +63,8 @@
 
 .footer {
   margin-top: 5px;
+  margin-bottom: 0px;
+  padding: 20px;
   height: 20vh;
   display: flex;
   flex-direction: column;
@@ -86,4 +88,8 @@
 }
 .main {
   margin-top: 50px;
+}
+
+a {
+  text-decoration: none;
 }

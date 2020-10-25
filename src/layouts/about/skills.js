@@ -1,4 +1,5 @@
 import React from "react";
+
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -40,7 +41,7 @@ const frontendData = [
   },
   {
     title: "javascript",
-    level: 60,
+    level: 70,
   },
   {
     title: "react",
@@ -56,7 +57,7 @@ const backendData = [
   },
   {
     title: "Mongo db",
-    level: 65,
+    level: 70,
   },
   {
     title: "Firebase",
@@ -73,7 +74,12 @@ function Intro(props) {
   const { classes } = props;
   const frontend = frontendData.map((items) => {
     return (
-      <Grid container direction="column" className={classes.each}>
+      <Grid
+        container
+        direction="column"
+        className={classes.each}
+        key={items.title}
+      >
         <Grid item sm={12} md={12}>
           <Grid container justify="space-between">
             <Grid item>
@@ -93,7 +99,12 @@ function Intro(props) {
 
   const backend = backendData.map((items) => {
     return (
-      <Grid container direction="column" className={classes.each}>
+      <Grid
+        container
+        direction="column"
+        className={classes.each}
+        key={items.title}
+      >
         <Grid item>
           <Grid container justify="space-between">
             <Grid item>

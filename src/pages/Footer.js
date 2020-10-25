@@ -1,6 +1,5 @@
 import React from "react";
-
-import Cards from "../components/card";
+import { ExternalLink } from "react-external-link";
 
 //mui
 import Grid from "@material-ui/core/Grid";
@@ -41,22 +40,34 @@ function Services(props) {
             spacing={2}
           >
             <Grid item>
-              <Avatar>
+              <Avatar
+                component={ExternalLink}
+                href="mailto:chisomprince17@gmail.com"
+              >
                 <MailIcon />
               </Avatar>
             </Grid>
             <Grid item>
-              <Avatar>
+              <Avatar
+                component={ExternalLink}
+                href="https://twitter.com/Chisomprince10"
+              >
                 <TwitterIcon className={classes.text} />
               </Avatar>
             </Grid>
             <Grid item>
-              <Avatar>
+              <Avatar
+                component={ExternalLink}
+                href="https://linkedin.com/in/chisom-moses-3a9b7315b"
+              >
                 <LinkedInIcon className={classes.text} />
               </Avatar>
             </Grid>
             <Grid item>
-              <Avatar>
+              <Avatar
+                component={ExternalLink}
+                href="https://github.com/Chisomprince"
+              >
                 <GitHubIcon className={classes.text} />
               </Avatar>
             </Grid>

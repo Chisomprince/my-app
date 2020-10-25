@@ -16,13 +16,14 @@ const styles = (theme) => ({
 const Experience = withStyles(styles)(({ classes }) => (
   <Card className={classes.card}>
     <CardContent>
-      <Typography variant="h4">Subject Title</Typography>
-      <Typography variant="subtitle1">A little more about subject</Typography>
+      <Typography variant="h4">Background</Typography>
+      <Typography variant="subtitle1">additiona infomation</Typography>
       <Typography className={classes.content}>
-        Even more information on the subject, contained within the card.
+        language: English (fluent)
       </Typography>
+      <Typography className={classes.content}>Nationality: Nigeria</Typography>
       <Typography className={classes.content}>
-        Even more information on the subject, contained within the card. You can
+        Experience: work at upwork.com
       </Typography>
     </CardContent>
   </Card>

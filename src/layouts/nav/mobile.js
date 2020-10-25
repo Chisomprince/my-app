@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -45,7 +45,7 @@ function ResAppBar(props) {
             </Grid>
             <Grid item sm={3} align="center">
               <Typography color="inherit" variant="headline" align="center">
-                prince<span className="colored"> chisom </span>
+                Chisom<span className="colored"> Prince</span>
               </Typography>
             </Grid>
 
@@ -72,7 +72,7 @@ function ResAppBar(props) {
             setdrawer(false);
           }}
         >
-          <List className={classes.list}>
+          <List className={classes.list} key={1}>
             <ListItem key={1} component={Link} to="/">
               home
             </ListItem>
@@ -83,7 +83,9 @@ function ResAppBar(props) {
             <ListItem key={3} component={Link} to="/about">
               about
             </ListItem>
-            <ListItem key={4} /* component={Link} to="/faq" */>learn</ListItem>
+            <ListItem key={4} component={Link} to="/learn">
+              learn
+            </ListItem>
           </List>
         </div>
       </SwipeableDrawer>

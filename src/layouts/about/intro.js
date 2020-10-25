@@ -26,7 +26,7 @@ const Intro = withStyles(styles)(({ classes }) => (
       <Typography variant="subtitle1" className={classes.text}>
         Autography
       </Typography>
-      <Typography className={classes.content} className={classes.text}>
+      <Typography className={classes.text}>
         chisom prince is an enthusiastic software developder eager to contribute
         to team success through dedication to duty, devotion to work and
         attention to details

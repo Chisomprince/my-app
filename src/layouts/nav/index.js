@@ -14,7 +14,7 @@ function Appbar() {
         setDrawerActivate(false);
       }
     });
-  });
+  }, []);
   const [drawerActivate, setDrawerActivate] = useState(false);
 
   return <div>{drawerActivate ? <Mobile /> : <Desktop />}</div>;

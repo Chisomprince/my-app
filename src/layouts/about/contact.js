@@ -25,7 +25,7 @@ const Contact = withStyles(styles)(({ classes }) => (
         Twitter: @chisomprince10
       </Typography>
       <Typography className={classes.content}>
-        Github: Github.oi/chisomprince
+        Github: Github.com/chisomprince
       </Typography>
     </CardContent>
   </Card>

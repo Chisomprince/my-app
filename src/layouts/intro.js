@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import withStyles from "@material-ui/core/styles/withStyles";
+import { Link } from "react-router-dom";
 
 const styles = {
   root: {
@@ -42,9 +43,12 @@ function Intro(props) {
           <Typography className={classes.head} variant="h4">
             transforming ideas to<span className="colored"> reality</span>
           </Typography>
-          <Button variant="outlined" color="primary">
-            chisom prince
-          </Button>
+
+          <Link to="/about">
+            <Button variant="outlined" color="primary">
+              chisom prince
+            </Button>
+          </Link>
         </Grid>
       </Grid>
     </div>

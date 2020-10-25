@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -37,13 +38,18 @@ function Intro2(props) {
         <Grid item>
           <Typography className={classes.caption} variant="h6">
             have a <span className="colored">project?</span> contact
-            <span className="colored"> me here</span> !
+            <span className="colored"> me </span> !
           </Typography>
           <Typography className={classes.text} variant="body1">
             am willing to assist in making your idea come to reality, just one
             click away and am there to assist
           </Typography>
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            component={Link}
+            to="/contact"
+          >
             contact me
           </Button>
         </Grid>

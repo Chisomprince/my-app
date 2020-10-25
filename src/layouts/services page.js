@@ -17,7 +17,7 @@ const servicesData = [
     img: "web",
     title: "Front-End",
     description:
-      "I make beautiful and looking front-end design observing bet practice",
+      "I make beautiful and resonsive website  observing best practice",
   },
   {
     img: "backend",
@@ -29,13 +29,13 @@ const servicesData = [
     img: "mobile",
     title: "Mobile Development",
     description:
-      "I offer artistic and beautiful mobile design, using react native",
+      "I offer elegant and gook looking mobile design, using react native",
   },
   {
     img: "datascience",
     title: "Data Science",
     description:
-      "call in for data analysis, artifical intelligence, machine learning and what have you",
+      "am currently learning datascience with python hope to work with you once i perfect my skills",
   },
 ];
 const styles = {
@@ -75,11 +75,12 @@ function Services(props) {
   }
 
   const mapped = servicesData.map((items, index) => (
-    <Grid item md={3}>
+    <Grid item md={3} key={items.title}>
       <Cards
         img={getIcon(items.img)}
         title={items.title}
         description={items.description}
+        key={items.title}
       />
     </Grid>
   ));
@@ -101,14 +102,7 @@ function Services(props) {
             </Typography>
           </Grid>
 
-          <Grid
-            item
-            sm={10}
-            md={8}
-            align="center"
-            justify="center"
-            className={classes.text}
-          >
+          <Grid item sm={10} md={8} align="center" className={classes.text}>
             i offer upto data quality and realiable services, abiding by best
             pratices and conventions to ensure your idea comes to reality,
             consistency, quick delivery, effective business - client relation,
@@ -129,6 +123,7 @@ function Services(props) {
           </Grid>
         </div>
       </Grid>
+      <div></div>
     </div>
   );
 }

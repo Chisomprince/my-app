@@ -17,7 +17,7 @@ function Index() {
         <Typography align="center" variant="h4">
           <span className="colored"> ABOUT ME</span>
         </Typography>
-        <img src={Image} width="250px" className="image" />
+        <img src={Image} alt="chisom" width="250px" className="image" />
       </Grid>
       <Grid container>
         <Grid item sm={1} md={2} />

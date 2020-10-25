@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 //mui
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+
+import { Tabs, Tab } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Grid from "@material-ui/core/Grid";
 
@@ -14,18 +14,26 @@ const styles = {
   title: {
     flex: 1,
     flexGrow: 1,
+    fontWeight: 800,
   },
   root: {
     marginRight: 50,
     marginLeft: 50,
   },
+  /*  appbar: {
+    backgroundColor: "#fff",
+  }, */
 };
 function Header(props) {
   const { classes } = props;
+  const [value, setValue] = useState(0);
+  const onChange = (e, value) => {
+    setValue(value);
+  };
 
   return (
     <div className="container">
-      <AppBar color="#fff" position="fixed">
+      <AppBar position="fixed" className={classes.appbar}>
         <Toolbar className={classes.root}>
           <Grid
             container
@@ -36,11 +44,10 @@ function Header(props) {
             <Grid item>
               <Typography
                 color="inherit"
-                variant="headline"
                 align="center"
                 className={classes.title}
               >
-                chisom <span className="colored">prince</span>
+                Chisom Prince
               </Typography>
             </Grid>
 
@@ -51,11 +58,11 @@ function Header(props) {
                 justify="space-between"
                 alignItems="center"
               >
-                <Tabs>
+                <Tabs value={value} onChange={onChange}>
                   <Tab label="home" component={Link} to={"/"} />
                   <Tab label="projects" component={Link} to={"/projects"} />
                   <Tab label="about" component={Link} to={"/about"} />
-                  <Tab label="learn" />
+                  <Tab label="learn" component={Link} to={"/learn"} />
                 </Tabs>
               </Grid>
             </Grid>

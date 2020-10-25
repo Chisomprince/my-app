@@ -1,6 +1,7 @@
 import React from "react";
 import bitcoin from "@material-ui/core/Avatar";
 import Cards from "../components/card";
+import { ExternalLink } from "react-external-link";
 
 //mui
 import Grid from "@material-ui/core/Grid";
@@ -13,23 +14,27 @@ const servicesData = [
     img: bitcoin,
     title: "Product Landing Page",
     description:
-      "made a landing page as a requirement of freecodecamp front end design project",
+      "made a landing page as part of freecodecamp front end design project ",
     action1: "github",
+    link1: "https://chisomprince.github.io",
+    link2: "https://github.com/Chisomprince/productpage",
     action2: "Visit",
   },
   {
     img: bitcoin,
     title: "Portfolio web",
     description:
-      "portfolio page designed by me, this page provide infromation about me",
+      "portfolio page designed by me, this page provide information about me",
     action1: "github",
     action2: "Visit",
+    link1: "https://chisomprince.github.io",
+    link2: "https://github.com/Chisomprince/my-app/",
   },
   {
     img: bitcoin,
     title: "Quiz App",
     description:
-      "a Quiz ap that eables you to create or take quiz created by others",
+      "a Quiz app that enables you to create or take quiz created by others",
     action1: "github",
     action2: "Visit",
   },
@@ -37,8 +42,9 @@ const servicesData = [
     img: bitcoin,
     title: "Others",
     description:
-      "i would love to share all my projects with you but some are still under development,follow me on socials to get update when the arrives",
+      "more project to be uploaded,follow me on socials to get update when the arrive",
     action2: "follow",
+    link2: "https://chisomprince.github.io",
   },
 ];
 const styles = {
@@ -59,14 +65,20 @@ const styles = {
 };
 function Services(props) {
   const { classes } = props;
+
   const mapped = servicesData.map((items, index) => (
-    <Grid item>
+    <Grid item key={items.title}>
       <Cards
         title={items.title}
         description={items.description}
         github={<Button>{items.action1}</Button>}
         visit={
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            component={ExternalLink}
+            href={items.link1}
+          >
             {items.action2}
           </Button>
         }
@@ -91,17 +103,11 @@ function Services(props) {
             </Typography>
           </Grid>
 
-          <Grid
-            item
-            sm={10}
-            md={8}
-            align="center"
-            justify="center"
-            className={classes.text}
-          >
-            here are some of the projects i have don over the days, join and
-            make your projects proud. share the testimony and come again, the
-            projects have been designed to beatiful UI, using CSS best pratices
+          <Grid item sm={10} md={8} align="center" className={classes.text}>
+            here are some of the projects i have worked on over the days, join
+            and make your projects proud. share the testimony and refer others,
+            the projects have been designed to resonsive UI, using CSS best
+            pratices
           </Grid>
 
           <Grid />
