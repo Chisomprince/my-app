@@ -15,14 +15,21 @@ const styles = {
     flex: 1,
     flexGrow: 1,
     fontWeight: 800,
+    color:'#000'
+    
   },
   root: {
     marginRight: 50,
     marginLeft: 50,
+    
   },
-  /*  appbar: {
-    backgroundColor: "#fff",
-  }, */
+  appbar: {
+    backgroundColor: '#fff',
+
+  }, 
+  navs:{
+    color:"#222"
+  }
 };
 function Header(props) {
   const { classes } = props;
@@ -58,11 +65,11 @@ function Header(props) {
                 justify="space-between"
                 alignItems="center"
               >
-                <Tabs value={value} onChange={onChange}>
-                  <Tab label="home" component={Link} to={"/"} />
-                  <Tab label="projects" component={Link} to={"/projects"} />
-                  <Tab label="about" component={Link} to={"/about"} />
-                  <Tab label="learn" component={Link} to={"/learn"} />
+                <Tabs value={value} onChange={onChange} className={classes.navs}>
+                  <Tab label="home" component={Link} to={"/"} className={classes.navs} />
+                  <Tab label="projects" component={Link} to={"/projects"} className={classes.navs}/>
+                  <Tab label="about" component={Link} to={"/about"} className={classes.navs}/>
+                  <Tab label="learn" component={Link} to={"/learn"} className={classes.navs}/>
                 </Tabs>
               </Grid>
             </Grid>

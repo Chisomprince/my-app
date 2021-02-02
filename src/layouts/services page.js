@@ -29,13 +29,13 @@ const servicesData = [
     img: "mobile",
     title: "Mobile Development",
     description:
-      "I offer elegant and gook looking mobile design, using react native",
+      "I offer elegant and good looking mobile design, using react native",
   },
   {
     img: "datascience",
     title: "Data Science",
     description:
-      "am currently learning datascience with python hope to work with you once i perfect my skills",
+      "am currently learning data science with python hope to work with you once i perfect my skills",
   },
 ];
 const styles = {
@@ -56,6 +56,9 @@ const styles = {
   box: {
     margin: 10,
   },
+  Cards:{
+    flex:1
+  }
 };
 function Services(props) {
   const { classes } = props;
@@ -77,6 +80,7 @@ function Services(props) {
   const mapped = servicesData.map((items, index) => (
     <Grid item md={3} key={items.title}>
       <Cards
+      className={classes.Cards}
         img={getIcon(items.img)}
         title={items.title}
         description={items.description}
@@ -103,7 +107,7 @@ function Services(props) {
           </Grid>
 
           <Grid item sm={10} md={8} align="center" className={classes.text}>
-            i offer upto data quality and realiable services, abiding by best
+            I offer upto data quality and realiable services, abiding by best
             pratices and conventions to ensure your idea comes to reality,
             consistency, quick delivery, effective business - client relation,
             and williness to serve

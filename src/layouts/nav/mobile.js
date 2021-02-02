@@ -44,7 +44,7 @@ function ResAppBar(props) {
               />
             </Grid>
             <Grid item sm={3} align="center">
-              <Typography color="inherit" variant="headline" align="center">
+              <Typography color="inherit" variant="head" align="center">
                 Chisom<span className="colored"> Prince</span>
               </Typography>
             </Grid>

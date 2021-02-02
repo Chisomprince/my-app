@@ -9,9 +9,9 @@ import Contact from "../layouts/contact";
 function Home() {
   return (
     <div>
-      <Intro />
+     <Intro /> 
       <Services />
-      <Intro2 />
+      <Intro2 /> 
       <Projects />
 
       <About />

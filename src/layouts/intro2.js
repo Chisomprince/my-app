@@ -37,11 +37,11 @@ function Intro2(props) {
       >
         <Grid item>
           <Typography className={classes.caption} variant="h6">
-            have a <span className="colored">project?</span> contact
+            Have a <span className="colored">project?</span> contact
             <span className="colored"> me </span> !
           </Typography>
           <Typography className={classes.text} variant="body1">
-            am willing to assist in making your idea come to reality, just one
+            Am willing to assist in making your idea come to reality, just one
             click away and am there to assist
           </Typography>
           <Button

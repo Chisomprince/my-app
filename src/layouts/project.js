@@ -14,27 +14,27 @@ const servicesData = [
     img: bitcoin,
     title: "Product Landing Page",
     description:
-      "made a landing page as part of freecodecamp front end design project ",
+      "Made a landing page as part of freecodecamp front end design project ",
     action1: "github",
+    action2: "Visit",
     link1: "https://chisomprince.github.io",
     link2: "https://github.com/Chisomprince/productpage",
-    action2: "Visit",
   },
   {
     img: bitcoin,
     title: "Portfolio web",
     description:
-      "portfolio page designed by me, this page provide information about me",
+      "Portfolio page designed by me, this page provide information about me",
     action1: "github",
     action2: "Visit",
-    link1: "https://chisomprince.github.io",
+    link1: "https://chisomprince.netlify.app/",
     link2: "https://github.com/Chisomprince/my-app/",
   },
   {
     img: bitcoin,
     title: "Quiz App",
     description:
-      "a Quiz app that enables you to create or take quiz created by others",
+      "A Quiz app that enables you to create or take quiz created by others",
     action1: "github",
     action2: "Visit",
   },
@@ -42,10 +42,11 @@ const servicesData = [
     img: bitcoin,
     title: "Others",
     description:
-      "more project to be uploaded,follow me on socials to get update when the arrive",
-    action2: "follow",
-    link2: "https://chisomprince.github.io",
+      "Still on progress ecommerce site, currently working on the front-end",
+    action2: "Visit",
+    link1: "https://jumiaclone.vercel.app",
   },
+  
 ];
 const styles = {
   header: {
@@ -71,7 +72,11 @@ function Services(props) {
       <Cards
         title={items.title}
         description={items.description}
-        github={<Button>{items.action1}</Button>}
+        github={
+          <Button component={ExternalLink} href={items.link2}>
+            {items.action1}
+          </Button>
+        }
         visit={
           <Button
             variant="contained"
@@ -99,12 +104,12 @@ function Services(props) {
         <Grid container direction="column" alignItems="center" justify="center">
           <Grid>
             <Typography className={classes.header} variant="h6">
-              awesome <span className="colored"> projects</span>
+              Awesome <span className="colored"> Projects</span>
             </Typography>
           </Grid>
 
           <Grid item sm={10} md={8} align="center" className={classes.text}>
-            here are some of the projects i have worked on over the days, join
+            Here are some of the projects i have worked on over the days, join
             and make your projects proud. share the testimony and refer others,
             the projects have been designed to resonsive UI, using CSS best
             pratices

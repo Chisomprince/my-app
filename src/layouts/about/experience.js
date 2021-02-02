@@ -9,20 +9,20 @@ const styles = (theme) => ({
 
     backgroundColor: "rgb(43, 54, 117)",
   },
-  content: {
-    marginTop: theme.spacing(1),
+  text: {
+    color:'#fff',
   },
 });
 const Experience = withStyles(styles)(({ classes }) => (
   <Card className={classes.card}>
     <CardContent>
-      <Typography variant="h4">Background</Typography>
-      <Typography variant="subtitle1">additiona infomation</Typography>
-      <Typography className={classes.content}>
+      <Typography variant="h4" className={classes.text}>Background</Typography>
+      <Typography variant="subtitle1" className={classes.text}>additiona infomation</Typography>
+      <Typography className={classes.text}>
         language: English (fluent)
       </Typography>
-      <Typography className={classes.content}>Nationality: Nigeria</Typography>
-      <Typography className={classes.content}>
+      <Typography className={classes.text}>Nationality: Nigeria</Typography>
+      <Typography className={classes.text}>
         Experience: work at upwork.com
       </Typography>
     </CardContent>
